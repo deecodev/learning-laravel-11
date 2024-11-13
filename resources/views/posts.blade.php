@@ -4,10 +4,10 @@
     @foreach ($posts as $post)
       <article>
         <a href="/post/{{ $post['slug'] }}">
-          <h2 class="tracking-tight text-2xl font-medium">{{ $post['title'] }}</h2>
+          <h2 class="tracking-tight text-2xl font-medium capitalize">{{ $post['title'] }}</h2>
         </a>
         <div class="text-sm text-gray-500 mb-4">
-          <a href="#">{{ $post['author'] }}</a> | 1 January 2024
+          <a href="#">{{ $post['author'] }}</a> | {{ $post->created_at->diffForHumans() }}
         </div>
         <p class="mb-4">
           {{ Str::limit($post['content'], 100) }}
