@@ -14,7 +14,7 @@
                         <x-navlink href="/about" :active="request()->is('about')">
                             about
                         </x-navlink>
-                        <x-navlink href="/posts" :active="request()->is('post*')">
+                        <x-navlink href="/posts" :active="request()->is(['post*', 'author*', 'categori*'])">
                             blog
                         </x-navlink>
                         <x-navlink href="/contact" :active="request()->is('contact')">
